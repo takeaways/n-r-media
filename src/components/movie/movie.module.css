@@ -1,0 +1,52 @@
+.poster {
+  margin: 15px;
+  width: 280px;
+  height: 320px;
+  border-radius: 5px;
+  background-size: cover;
+  cursor: pointer;
+  position: relative;
+  transition: all 300ms ease;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.poster header {
+  position: absolute;
+  width: 280px;
+  height: 320px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  padding: 10px;
+  padding-top: 20px;
+  transition: all 300ms ease;
+  transform: translateY(20px);
+}
+
+.poster:hover {
+  transform: scale(0.95);
+}
+
+.poster:hover header {
+  opacity: 1;
+  transform: scale(1.05) translateY(0);
+}
+
+.poster header h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+.poster header span {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.poster header p {
+  color: rosybrown;
+}

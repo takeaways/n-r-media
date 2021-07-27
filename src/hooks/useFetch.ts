@@ -1,14 +1,21 @@
 import { useState, useEffect } from 'react';
+import { AxiosRequestConfig } from 'axios';
+import { useLoadingDispatch } from '../providers/loading';
 import http from '../utils/api';
 
-function useFetch<Response>(path: string) {
-  const [result, setResult] = useState<Response[]>([]);
+function useFetch<Response>(path: string, config?: AxiosRequestConfig) {
+  const setLoading = useLoadingDispatch();
+  const [result, setResult] = useState<Response | null>(null);
 
   useEffect(() => {
-    http.get(path).then(response => {
-      setResult(response.data.results);
+    setLoading(true);
+    http.get(path, config).then(response => {
+      setTimeout(() => {
+        setResult(response.data);
+        setLoading(false);
+      }, 300);
     });
-  }, []);
+  }, [config?.params.page]);
 
   return result;
 }

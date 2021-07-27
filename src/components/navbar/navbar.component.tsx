@@ -1,12 +1,10 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import style from './navbar.module.css';
 import logo from '../../assets/images/logo.png';
 import { routes } from '../../routes/routes';
 
 function NavBar() {
-  const match = useLocation();
-  console.log(match);
   return (
     <nav className={style.navbar}>
       <div className={style.logo}>

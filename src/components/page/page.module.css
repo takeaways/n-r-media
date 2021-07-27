@@ -1,0 +1,27 @@
+.paging {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1.3rem;
+  font-size: 1.4rem;
+  color: whitesmoke;
+  position: sticky;
+  top: 0;
+
+  z-index: 100;
+}
+
+.page {
+  width: 200px;
+  text-align: center;
+}
+.left,
+.right {
+  cursor: pointer;
+}
+
+.left:hover,
+.right:hover {
+  color: black;
+}
