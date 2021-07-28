@@ -4,7 +4,7 @@ import styles from './git-issue-form.module.css';
 import { useState } from 'react';
 import { useLoadingDispatch } from '../../providers/loading';
 
-const octokit = new Octokit({ auth: `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` });
+const octokit = new Octokit({ auth: `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` });
 
 type Props = {
   onToggle?: () => void;
