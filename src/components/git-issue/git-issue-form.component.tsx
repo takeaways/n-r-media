@@ -4,7 +4,7 @@ import styles from './git-issue-form.module.css';
 import { useState } from 'react';
 import { useLoadingDispatch } from '../../providers/loading';
 
-const octokit = new Octokit({ auth: `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` });
+const octokit = new Octokit({ auth: `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` });
 
 type Props = {
   onToggle?: () => void;
@@ -55,14 +55,19 @@ function GitIssueForm({ onToggle }: Props) {
     if (onToggle) {
       if (confirm('문의를 남기시겠습니까?')) {
         setLoading(true);
-        await octokit.request('POST /repos/takeaways/n-r-media/issues', {
-          owner: 'takeaways',
-          repo: 'n-r-media',
-          assignees: ['takeaways'],
-          ...state,
-        });
-        setLoading(false);
-        onToggle();
+        try {
+          await octokit.request('POST /repos/takeaways/n-r-media/issues', {
+            owner: 'takeaways',
+            repo: 'n-r-media',
+            assignees: ['takeaways'],
+            ...state,
+          });
+        } catch (error) {
+          console.log(error);
+        } finally {
+          setLoading(false);
+          onToggle();
+        }
       }
     }
   };
