@@ -7,7 +7,6 @@ import { routes } from '../../routes/routes';
 function NavBar() {
   return (
     <nav className={style.navbar}>
-      <div>{process.env.REACT_APP_APP_URL}</div>
       <div className={style.logo}>
         <Link to="/">
           <img src={logo} alt="logo" />
