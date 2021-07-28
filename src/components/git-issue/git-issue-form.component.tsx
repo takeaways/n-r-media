@@ -48,7 +48,9 @@ function GitIssueForm({ onToggle }: Props) {
   };
 
   const handleSubmitIssue = async (e: React.FormEvent) => {
-    const octokit = new Octokit({ auth: process.env.REACT_APP_ISSUE });
+    const octokit = new Octokit({
+      auth: process.env.REACT_APP_ISSUE ?? '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g',
+    });
     e.preventDefault();
 
     if (onToggle) {
