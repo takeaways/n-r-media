@@ -23,8 +23,8 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "REACT_APP_ISSUE=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 react-scripts build",
+    "start": "REACT_APP_ISSUE=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 react-scripts start",
+    "build": "REACT_APP_ISSUE=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 react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
