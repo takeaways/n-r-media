@@ -1,0 +1,27 @@
+.githubBtn {
+  position: fixed;
+  bottom: 20px;
+  left: 10px;
+  z-index: 1000;
+
+  font-size: 1.1rem;
+
+  width: 100px;
+  height: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #00dd99;
+  color: indianred;
+}
+
+.githubBtn:hover {
+  color: whitesmoke;
+}
+
+.githubBtn:active {
+  opacity: 0.8;
+}
+
+.githubBtn i {
+  margin-right: 5px;
+}
