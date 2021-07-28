@@ -4,8 +4,6 @@ import styles from './git-issue-form.module.css';
 import { useState } from 'react';
 import { useLoadingDispatch } from '../../providers/loading';
 
-const octokit = new Octokit({ auth: `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` });
-
 type Props = {
   onToggle?: () => void;
 };
@@ -50,6 +48,7 @@ function GitIssueForm({ onToggle }: Props) {
   };
 
   const handleSubmitIssue = async (e: React.FormEvent) => {
+    const octokit = new Octokit({ auth: process.env.REACT_APP_ISSUE });
     e.preventDefault();
 
     if (onToggle) {
