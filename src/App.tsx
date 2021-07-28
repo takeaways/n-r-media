@@ -8,6 +8,7 @@ import Footer from './components/footer/footer.component';
 import HomePage from './pages/home/home.component';
 import TvPage from './pages/tv/tv.component';
 import PeoplePage from './pages/people/people.component';
+import GitIssue from './components/git-issue/git-issue.component';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         </Switch>
       </Main>
       <Footer />
+      <GitIssue />
     </>
   );
 }
