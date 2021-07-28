@@ -20,6 +20,7 @@ function useModal(content: JSX.Element): [() => void, React.ReactPortal] {
           {React.cloneElement(content, { onToggle })}
         </div>
       ) : null,
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       document.querySelector('#modal')!,
     ),
   ];
