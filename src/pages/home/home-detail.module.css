@@ -1,0 +1,115 @@
+.article {
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  background-color: indianred;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+}
+
+.back {
+  position: absolute;
+  top: 1.7rem;
+  left: 1.7rem;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.back:hover {
+  opacity: 0.8;
+}
+
+.header {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  padding: 10%;
+  display: flex;
+  z-index: 200;
+}
+
+.headerLeft {
+  height: 100%;
+  flex-basis: 45%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: whitesmoke;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.headerLeft h2 {
+  font-size: 3rem;
+}
+.headerLeft h3 {
+  font-size: 1.8rem;
+}
+
+.headerLeft span {
+  font-size: 1.2rem;
+}
+
+.headerRight {
+  height: 100%;
+  flex-basis: 55%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+
+  position: relative;
+}
+
+.overview {
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: wheat;
+}
+
+.move {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 102;
+  top: 12;
+  left: 43;
+  background-color: wheat;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding-top: 20%;
+  }
+  .headerLeft {
+    flex-basis: 30%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .headerRight {
+    flex-basis: 65%;
+    border-radius: 10px;
+  }
+  .overview {
+    border-radius: 10px;
+  }
+}

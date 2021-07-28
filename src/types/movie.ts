@@ -16,4 +16,10 @@ export type Movie = {
   vote_count: number;
 };
 
+export type MovieDetail = Movie & {
+  runtime: number;
+  status: string;
+  tagline: string;
+};
+
 export type Genre = { id: number; name: string };

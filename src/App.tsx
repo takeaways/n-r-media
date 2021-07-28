@@ -15,14 +15,14 @@ function App() {
       <Navbar />
       <Main>
         <Switch>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
           <Route path="/tv">
             <TvPage />
           </Route>
           <Route path="/people">
             <PeoplePage />
+          </Route>
+          <Route path={['/movie', '/']}>
+            <HomePage />
           </Route>
         </Switch>
       </Main>

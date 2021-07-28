@@ -3,4 +3,31 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  transform: scale(0.5);
+  opacity: 0;
+  transition: transform 0.3s ease-in;
+  will-change: transform, contents, opacity;
+}
+
+.show {
+  opacity: 1;
+  transform: scale(1);
+  /* animation-name: swipe;
+  animation-duration: 2s;
+  animation-duration: leaner;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards; */
+}
+
+@keyframes swipe {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

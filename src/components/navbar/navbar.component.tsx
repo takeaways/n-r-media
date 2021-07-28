@@ -8,7 +8,9 @@ function NavBar() {
   return (
     <nav className={style.navbar}>
       <div className={style.logo}>
-        <img src={logo} alt="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
       </div>
       <ul className={style.menu}>
         {routes.map(route => (

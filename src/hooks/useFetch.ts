@@ -10,10 +10,10 @@ function useFetch<Response>(path: string, config?: AxiosRequestConfig) {
   useEffect(() => {
     setLoading(true);
     http.get(path, config).then(response => {
+      setResult(response.data);
       setTimeout(() => {
-        setResult(response.data);
         setLoading(false);
-      }, 300);
+      }, 1300);
     });
   }, [config?.params.page]);
 
