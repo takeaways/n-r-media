@@ -9,6 +9,6 @@ export const routes = [
   },
   {
     path: '/people',
-    label: '인물',
+    label: 'TALK',
   },
 ] as const;
