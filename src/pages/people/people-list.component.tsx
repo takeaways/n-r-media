@@ -66,8 +66,8 @@ function PeopleListPage() {
     myPeerConnection.current.addEventListener('icecandidate', data => {
       socketClient.emit('ice', data.candidate, roomName);
     });
-    myPeerConnection.current.addEventListener('addstream', (data: any) => {
-      peerVideoRef.current.srcObject = data.stream;
+    myPeerConnection.current.addEventListener('addstream', (data: unknown) => {
+      peerVideoRef.current.srcObject = (data as { stream: MediaStream }).stream;
     });
 
     myStream.current
