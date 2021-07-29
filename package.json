@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "REACT_APP_ISSUE=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 react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
