@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch, useRouteMatch } from 'react-router-dom';
+
 import PeopleListPage from './people-list.component';
 import PeopleDetailPage from './people-detail.component';
 
