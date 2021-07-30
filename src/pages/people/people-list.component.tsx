@@ -157,6 +157,15 @@ function PeopleListPage() {
         </section>
       ) : (
         <>
+          <button
+            className={styles.goBack}
+            type="button"
+            onClick={() => {
+              history.go(0);
+            }}
+          >
+            <i className="fas fa-times"></i>
+          </button>
           <section className={styles.videoSectionContainer}>
             <div className={styles.myContainer}>
               <video ref={myVideoRef} autoPlay playsInline muted />
@@ -166,8 +175,12 @@ function PeopleListPage() {
             </div>
           </section>
           <section className={styles.controlContainer}>
-            <button onClick={handleSound}>sound {!sound && 'X'}</button>
-            <button onClick={handleScreen}>video {!screen && 'X'}</button>
+            <button onClick={handleSound}>
+              <span>sound {!sound && 'X'}</span>
+            </button>
+            <button onClick={handleScreen}>
+              <span>video {!screen && 'X'}</span>
+            </button>
           </section>
         </>
       )}
