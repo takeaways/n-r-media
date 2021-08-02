@@ -31,7 +31,7 @@ function Ball({ src }: Props) {
         left: Math.floor(Math.random() * window.innerWidth - 10),
       }}
     >
-      {/* {src && <img src={src} />} */}
+      {src && <img src={src} />}
     </div>
   );
 }
