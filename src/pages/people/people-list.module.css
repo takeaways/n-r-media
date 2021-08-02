@@ -23,6 +23,7 @@
   font-size: 2rem;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  user-select: auto;
 }
 .buttonGroup {
   display: flex;
@@ -91,6 +92,7 @@
   height: 90%;
   width: 100%;
   display: flex;
+  transform-style: preserve-3d;
 }
 .myContainer {
   width: 100%;

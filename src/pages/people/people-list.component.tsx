@@ -63,11 +63,14 @@ function PeopleListPage() {
         },
       ],
     });
+
     myPeerConnection.current.addEventListener('icecandidate', data => {
       socketClient.emit('ice', data.candidate, roomName);
     });
-    myPeerConnection.current.addEventListener('addstream', (data: unknown) => {
-      peerVideoRef.current.srcObject = (data as { stream: MediaStream }).stream;
+
+    myPeerConnection.current.addEventListener('track', event => {
+      const stream = event.streams[0];
+      peerVideoRef.current.srcObject = stream;
     });
 
     myStream.current
