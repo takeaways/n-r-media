@@ -95,6 +95,7 @@
 .myContainer {
   width: 100%;
   border-radius: 10px;
+  transform: rotateY(180deg);
   box-shadow: rgba(0, 238, 155, 0.17) 0px -23px 25px 0px inset,
     rgba(0, 238, 155, 0.15) 0px -36px 30px 0px inset,
     rgba(0, 238, 155, 0.1) 0px -79px 40px 0px inset, rgba(0, 238, 155, 0.06) 0px 2px 1px,
@@ -106,6 +107,7 @@
   height: 100%;
   width: 100%;
   border-radius: 10px;
+  transform: rotateY(180deg);
   box-shadow: rgba(0, 238, 155, 0.17) 0px -23px 25px 0px inset,
     rgba(0, 238, 155, 0.15) 0px -36px 30px 0px inset,
     rgba(0, 238, 155, 0.1) 0px -79px 40px 0px inset, rgba(0, 238, 155, 0.06) 0px 2px 1px,
