@@ -4,6 +4,7 @@ import styles from './ball.module.css';
 type Props = {
   src?: string;
 };
+
 function Ball({ src }: Props) {
   const ballRef = useRef<HTMLDivElement>(null);
 
@@ -26,37 +27,48 @@ function Ball({ src }: Props) {
       ref={ballRef}
       className={styles.ball}
       style={{
-        top: Math.floor(Math.random() * window.innerHeight),
-        left: Math.floor(Math.random() * window.innerWidth),
+        top: Math.floor(Math.random() * window.innerHeight - 10),
+        left: Math.floor(Math.random() * window.innerWidth - 10),
       }}
     >
-      {src && <img src={src} />}
+      {/* {src && <img src={src} />} */}
     </div>
   );
 }
 
 function move(ballRef: React.RefObject<HTMLDivElement>) {
+  const BASE_SIZE = 10;
+  const OFF_SET = 3;
   let dx = Math.floor(Math.random() * 2 + 1);
   let dy = Math.floor(Math.random() * 2 + 1);
-  const BASE_SIZE = 40;
-
+  let positionX = 0;
+  let positionY = 0;
   return () => {
     if (ballRef.current !== null) {
       const ball = ballRef.current.getBoundingClientRect();
       const { x, y } = ball;
 
       if (y >= innerHeight - BASE_SIZE) {
-        dy = -2 * Math.floor(Math.random() * 2);
-      } else if (x >= innerWidth - BASE_SIZE) {
-        dx = -2 * Math.floor(Math.random() * 2);
-      } else if (y <= 0) {
-        dy = 2 * Math.floor(Math.random() * 2);
-      } else if (x <= 0) {
-        dx = 2 * Math.floor(Math.random() * 2);
+        dy = -1 * Math.floor(Math.random() * 2);
+      } else if (y < 0) {
+        dy = 1 * Math.floor(Math.random() * 2);
       }
 
-      ballRef.current.style.left = `${x + 1 * dx}px`;
-      ballRef.current.style.top = `${y + 1 * dy}px`;
+      if (x >= innerWidth - BASE_SIZE) {
+        dx = -1 * Math.floor(Math.random() * 2);
+      } else if (x < 0) {
+        dx = 1 * Math.floor(Math.random() * 8);
+      }
+
+      positionX = positionX + OFF_SET * dx;
+      positionY = positionY + OFF_SET * dy;
+      ballRef.current.style.transform = `translate(${positionX}px , ${positionY}px)`;
+      ballRef.current.style.backgroundColor = `rgba(
+          ${Math.floor(Math.random() * 255)},
+          ${Math.floor(Math.random() * 255)},
+          ${Math.floor(Math.random() * 255)},
+          1
+        )`;
     }
   };
 }

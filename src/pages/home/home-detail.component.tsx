@@ -45,7 +45,7 @@ function HomeDetailPage() {
             <p className={styles.overview}>{response?.overview}</p>
           </div>
         </header>
-        {new Array(10).fill(0).map((_, i) => (
+        {new Array(30).fill(0).map((_, i) => (
           <Ball key={i} src={snow} />
         ))}
       </article>
