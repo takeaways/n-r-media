@@ -13,7 +13,7 @@ import GitIssue from './components/git-issue/git-issue.component';
 
 function App() {
   useEffect(() => {
-    ReactGA.initialize('G-084ZL2BM3H');
+    ReactGA.initialize('G-GGZ8SJ9WGS');
     ReactGA.pageview('/');
   }, []);
   return (
