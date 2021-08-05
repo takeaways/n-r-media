@@ -14,7 +14,7 @@ import GitIssue from './components/git-issue/git-issue.component';
 function App() {
   useEffect(() => {
     ReactGA.initialize('G-GGZ8SJ9WGS');
-    ReactGA.pageview('/');
+    ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
   return (
     <>
