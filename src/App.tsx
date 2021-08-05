@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 import Navbar from './components/navbar/navbar.component';
 import Main from './components/main/main.component';
@@ -11,6 +12,10 @@ import PeoplePage from './pages/people/people.component';
 import GitIssue from './components/git-issue/git-issue.component';
 
 function App() {
+  useEffect(() => {
+    ReactGA.initialize('G-084ZL2BM3H');
+    ReactGA.pageview('/');
+  }, []);
   return (
     <>
       <Navbar />
@@ -22,7 +27,7 @@ function App() {
           <Route path="/people">
             <PeoplePage />
           </Route>
-          <Route path={['/movie', '/']}>
+          <Route exact path={['/', '/movie']}>
             <HomePage />
           </Route>
         </Switch>
