@@ -27,7 +27,7 @@ function App() {
           <Route path="/people">
             <PeoplePage />
           </Route>
-          <Route exact path={['/', '/movie']}>
+          <Route path={['/movie', '/']}>
             <HomePage />
           </Route>
         </Switch>

@@ -10,7 +10,7 @@ import LoadingProvider from './providers/loading';
 ReactDOM.render(
   <React.StrictMode>
     <LoadingProvider>
-      <Router basename="/movie">
+      <Router>
         <App />
       </Router>
     </LoadingProvider>

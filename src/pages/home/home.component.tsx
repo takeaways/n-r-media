@@ -6,7 +6,6 @@ import HomeDetailPage from './home-detail.component';
 
 function HomePage() {
   const { url } = useRouteMatch();
-
   return (
     <Switch>
       <Route exact path={url}>
